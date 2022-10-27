@@ -1,8 +1,9 @@
 class Gradebook
-  attr_reader :instructor
+  attr_reader :instructor,
+              :courses
 
   def initialize(name)
     @instructor = name
-    @courses
+    @courses = []
   end
 end
