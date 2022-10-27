@@ -8,4 +8,8 @@ class Course
     @capacity = cap
     @students = []
   end
+
+  def full?
+    @students.count >= @capacity
+  end
 end
