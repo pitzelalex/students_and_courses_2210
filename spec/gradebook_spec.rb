@@ -10,5 +10,9 @@ describe Gradebook do
     it 'is an instance of Gradebook' do
       expect(@gradebook).to be_a Gradebook
     end
+
+    it 'has an instructor' do
+      expect(@gradebook.instructor).to eq("Alex")
+    end
   end
 end
