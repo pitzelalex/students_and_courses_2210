@@ -14,5 +14,9 @@ describe Course do
     it 'has a name' do
       expect(@course.name).to eq("Calculus")
     end
+
+    it 'has a capacity' do
+      expect(@course.capacity).to eq(2)
+    end
   end
 end
