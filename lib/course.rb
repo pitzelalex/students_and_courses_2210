@@ -1,9 +1,11 @@
 class Course
   attr_reader :name,
-              :capacity
+              :capacity,
+              :students
 
   def initialize(name, cap)
     @name = name
     @capacity = cap
+    @students = []
   end
 end
