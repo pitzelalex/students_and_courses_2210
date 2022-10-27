@@ -8,5 +8,9 @@ RSpec.describe Student do
     it 'is an instance of Student' do
       expect(@student).to be_a Student
     end
+
+    it 'stores the students details' do
+      expect(@student.details).to eq({name: "Morgan", age: 21})
+    end
   end
 end
