@@ -1,5 +1,6 @@
 require 'rspec'
-require './lib/course'
+require './lib/course' 
+# Why is this working without the require './lib/student' ???
 
 describe Course do
   describe '#initialize' do
