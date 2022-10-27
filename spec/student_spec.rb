@@ -12,6 +12,10 @@ RSpec.describe Student do
     it 'stores the students details' do
       expect(@student.details).to eq({name: "Morgan", age: 21})
     end
+
+    it 'can store scores' do
+      expect(@student.scores).to eq([])
+    end
   end
   
   describe '#name' do
