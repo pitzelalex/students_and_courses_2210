@@ -33,4 +33,15 @@ RSpec.describe Student do
       expect(student.age).to eq(21)
     end
   end
+
+  describe '#log_score' do
+    before(:each) do
+      @student = Student.new({name: "Morgan", age: 21})
+    end
+    it 'adds one score to scores array' do
+      @student.log_score(89)
+
+      expect(@student.scores).to eq([89])
+    end
+  end
 end
