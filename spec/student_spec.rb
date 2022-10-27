@@ -13,4 +13,12 @@ RSpec.describe Student do
       expect(@student.details).to eq({name: "Morgan", age: 21})
     end
   end
+  
+  describe '#name' do
+    it 'returns the name from student.details' do
+      student = Student.new({name: "Morgan", age: 21})
+
+      expect(student.name).to eq("Morgan")
+    end
+  end
 end
