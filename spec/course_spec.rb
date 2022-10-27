@@ -18,5 +18,9 @@ describe Course do
     it 'has a capacity' do
       expect(@course.capacity).to eq(2)
     end
+
+    it 'can have students' do
+      expect(@course.students).to eq([])
+    end
   end
 end
