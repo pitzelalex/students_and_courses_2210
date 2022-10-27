@@ -19,7 +19,7 @@ RSpec.describe Student do
   end
   
   describe '#name' do
-    it 'returns the name from student.details' do
+    it 'return the name from student.details' do
       student = Student.new({name: "Morgan", age: 21})
 
       expect(student.name).to eq("Morgan")
@@ -27,7 +27,7 @@ RSpec.describe Student do
   end
 
   describe '#age' do
-    it 'returns the age from student.details' do
+    it 'return the age from student.details' do
       student = Student.new({name: "Morgan", age: 21})
 
       expect(student.age).to eq(21)
@@ -39,18 +39,28 @@ RSpec.describe Student do
       @student = Student.new({name: "Morgan", age: 21})
     end
 
-    it 'adds one score to scores array' do
+    it 'add one score to scores array' do
       @student.log_score(89)
 
       expect(@student.scores).to eq([89])
     end
 
-    it 'adds three scores to scores array' do
+    it 'add three scores to scores array' do
       @student.log_score(89)
       @student.log_score(78)
       @student.log_score(92)
 
       expect(@student.scores).to eq([89, 78, 92])
+    end
+  end
+
+  describe '#grade' do
+    it 'return average of all scores' do
+      student = Student.new({name: "Morgan", age: 21})
+      student.log_score(89)
+      student.log_score(78)
+
+      expect(student.grade).to eq(83.5)
     end
   end
 end
