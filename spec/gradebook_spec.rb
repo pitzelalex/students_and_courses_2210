@@ -14,5 +14,9 @@ describe Gradebook do
     it 'has an instructor' do
       expect(@gradebook.instructor).to eq("Alex")
     end
+
+    it 'can have an array or courses' do
+      expect(@gradebook.courses).to eq([])
+    end
   end
 end
