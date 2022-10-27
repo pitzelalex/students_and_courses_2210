@@ -19,4 +19,16 @@ describe Gradebook do
       expect(@gradebook.courses).to eq([])
     end
   end
+
+  describe '#add_course' do
+    it 'add a course to @courses' do
+      gradebook = Gradebook.new("Alex")
+      course1 = Course.new("Calculus", 2)
+      course2 = Course.new("Math", 3)
+      gradebook.add_course(course1)
+      gradebook.add_course(course2)
+
+      expect(gradebook.courses).to eq([course1, course2])
+    end
+  end
 end
