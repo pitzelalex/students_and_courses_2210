@@ -8,4 +8,8 @@ class Student
   def name
     @details[:name]
   end
+
+  def age
+    @details[:age]
+  end
 end
